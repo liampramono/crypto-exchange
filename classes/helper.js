@@ -4,9 +4,9 @@ const Bitcore = require("bitcore-lib");
 
 class Helper {
     constructor(host, bucket, username, password, seed) {
-        this.cluster = new Couchbase.Cluster("couchbase://" + host);
-        this.cluster.authenticate(username, password);
-        this.bucket = this.cluster.openBucket(bucket);
+        // this.cluster = new Couchbase.Cluster("couchbase://" + host);
+        // this.cluster.authenticate(username, password);
+        // this.bucket = this.cluster.openBucket(bucket);
         this.master = seed;
     }
 
@@ -43,3 +43,5 @@ class Helper {
 
     createTransactionFromMaster(account, destination, amount) {}
 }
+
+module.exports = Helper;
