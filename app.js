@@ -17,9 +17,9 @@ const master = new Bitcore.HDPrivateKey(mnemonic.toHDPrivateKey());
 
 module.exports.helper = new Helper(Config.host, Config.bucket, Config.username, Config.password, master);
 
-// require("./routes/account.js")(app);
-// require("./routes/transciton.js")(app);
-// require("./routes/utility.js")(app);
+require("./routes/account.js")(app);
+require("./routes/transaction.js")(app);
+require("./routes/utility.js")(app);
 
 const server = app.listen(3000, () => {
     console.log("Listening at :" + server.address().port + "...");
